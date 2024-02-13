@@ -1,0 +1,17 @@
+{% extends '../base.html' %}
+{% load static %}
+
+
+{% block content %}
+<div class="news-detail">
+    <div class="container">
+        <a href="{% url 'home_page' %}" class="button-primary">Back</a>
+        <h1 class="primary-title">{{ post.title }}</h1>
+        <div class="news-detail-img">
+            <img src="{{ post.image }}" alt="{{ post.title }}">
+        </div>
+        <p class="news-detail-description">Description: {{ post.description }}</p>
+        <p class="news-detail-date">{{ post.post_date|date:"d.m.Y" }}</p>
+    </div>
+</div>
+{% endblock %}
